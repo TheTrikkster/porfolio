@@ -18,6 +18,6 @@
       "@components:./components/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/api/chatGpt.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/api/chatGpt.js", "src/component"],
   "exclude": ["node_modules"]
 }
