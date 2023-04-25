@@ -1,0 +1,81 @@
+.home_container {
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0 auto;
+}
+
+.home_header_container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.home_main_container {
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+}
+
+// Left
+.home_left_side_container {
+    width: 50%;
+    padding-right: 50px;
+}
+
+.home_left_side_p {
+    line-height: 2.5;
+    margin: 0;
+}
+
+
+// Riht
+.home_right_side_container {
+    width: 50%;
+    position: relative;
+}
+
+.home_my_image {
+    width: 100%;
+    border-radius: 100px;
+}
+
+.home_image_zoom {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: scale(1.03);
+
+}
+
+.home_competences {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    visibility: hidden;
+}
+
+.home_skills_title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+
+.home_left_side_skills {
+    padding-right: 70px;
+}
+
+.home_change_opacity {
+    opacity: 0.4;
+}
+
+.home_competences_show {
+    visibility: visible;
+}
+
+@media screen and (max-width: 768px) {
+    .home_left_side_skills {
+        padding-right: 0px;
+    }
+}
