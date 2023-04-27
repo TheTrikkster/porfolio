@@ -3,79 +3,167 @@
     display: flex;
     flex-flow: column wrap;
     margin: 0 auto;
-}
+};
 
 .home_header_container {
     text-align: center;
     margin-top: 50px;
-}
+};
 
 .home_main_container {
     width: 100%;
-    display: flex;
     margin-top: 100px;
-}
+};
+
+.home_container_of_image_and_text {
+    display: flex;
+    position: relative;
+};
 
 // Left
 .home_left_side_container {
     width: 50%;
     padding-right: 50px;
-}
+};
 
 .home_left_side_p {
     line-height: 2.5;
-    margin: 0;
-}
-
+    margin: 0 0 30px 0;
+};
 
 // Riht
 .home_right_side_container {
     width: 50%;
     position: relative;
-}
+};
 
 .home_my_image {
     width: 100%;
-    border-radius: 100px;
-}
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+};
 
 .home_image_zoom {
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform: scale(1.03);
 
-}
+};
+
+.home_competences_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(60%, -130%);
+};
 
 .home_competences {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     visibility: hidden;
-}
+};
 
 .home_skills_title {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    top: 0%;
+    left: 40%;
+    width: 40px;
+    margin: 0 0 30px 0;
+    transform: translateX(-10%);
     visibility: hidden;
-}
+};
 
 .home_left_side_skills {
-    padding-right: 70px;
-}
+    padding-right: 100px;
+};
 
 .home_change_opacity {
     opacity: 0.4;
-}
+};
 
 .home_competences_show {
     visibility: visible;
-}
+};
+
+@media screen and (max-width: 1200px) {
+    .home_image_zoom {
+        transition: none;
+        transform: none;
+    };
+
+    .home_change_opacity  {
+        opacity: 1;
+    };
+
+    .home_competences_container {
+        position: relative;
+        top: 50%;
+        left: 0%;
+        transform: translate(0%, 0%);
+        margin-top: 50px;
+        text-align: center;
+    };
+    
+    .home_skills_title {
+        visibility: visible;
+        position: relative;
+        left: 48.5%;
+    }; 
+
+    .home_competences {
+        visibility: visible;
+        position: relative;
+        left: 0%;
+        justify-content: space-evenly;
+    };
+
+    .home_left_side_skills {
+        padding: 0px
+    };
+  };
 
 @media screen and (max-width: 768px) {
-    .home_left_side_skills {
+
+    .home_container {
+        width: 90%;
+    };
+
+    .home_header_container {
+        margin-top: 20px;
+    };
+
+    .home_main_container {
+        margin-top: 70px;
+    };
+
+    .home_container_of_image_and_text {
+        flex-direction: column;
+    };
+
+    .home_left_side_container {
+        width: 100%;
         padding-right: 0px;
-    }
-}
+        order: 2;
+    };
+
+    .home_right_side_container {
+        width: 90%;
+        margin: 0 auto 50px;
+        order: 1;
+    };
+
+    .home_image_zoom {
+        transition: none;
+        transform: none;
+    };
+
+    .home_change_opacity  {
+        opacity: 1;
+    };
+
+    .home_competences {
+        visibility: visible;
+        position: relative;
+        left: 0%;
+        transform: none;
+        justify-content: space-evenly;
+    };
+};

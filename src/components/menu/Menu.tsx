@@ -3,16 +3,11 @@ import styles from './Menu.module.scss';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
+import { namesAndLinkes } from '../data';
 
 function Menu() {
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
-
-  const namesAndLinkes = [
-    { name: 'Home', link: '/' },
-    { name: 'Chatbot', link: '/chatbot' },
-    { name: 'Career', link: '/career' }
-  ];
 
   return (
     <nav>
