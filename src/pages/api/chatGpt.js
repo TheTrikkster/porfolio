@@ -17,6 +17,10 @@ const response = async ( bodys ) => {
 
         To answer the questions, you must rely on this information:
 
+            About me: I started programming at the age of 16 following a discussion with a relative who works in this field. 
+            He introduced me to the profession and I was immediately won over. I started by learning the basics of HTML and CSS by following online tutorials, 
+            then I progressed to Javascript and, later, React. Shortly after obtaining my baccalaureate, I had the opportunity to do an internship at Fason...
+
             Experiences
             12/2022 - 01/2023 - The Gems Hunter (React TypeScript)
             
@@ -64,6 +68,9 @@ const response = async ( bodys ) => {
             - Responsive web design: Flexbox, CSS Grid, Bootstrap for adaptive designs
             - Accessibility: Implementation of best practices for colors, link and image descriptions, ensuring optimal accessibility for all users
             - CSS: Excellent understanding of CSS cascade, mastery of SCSS for modular and maintainable design
+
+            Skills enumeration: Javascript, TypeScript, React, Next, AWS Amplify, GraphQL, Node, Express, Jest, RTL (react testing library), Redux, HTML, CSS, Sass, Git
+            
 
             Training & Education
             
