@@ -1,5 +1,5 @@
 
-import { useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from './Chatbot.module.scss';
 import { PacmanLoader } from 'react-spinners';
 
@@ -43,7 +43,7 @@ export default function Chatbot() {
       if(!response.ok) {
         return;
       };
-
+      
       const data = await response.json()
       newMessageList.push({
         role: data.role,
@@ -84,7 +84,7 @@ export default function Chatbot() {
           </div>
         )}
       </div>
-      {loading ?  <PacmanLoader color="#0070F3" size={25}/> : <p className={styles.chatbot_emty_p}></p>}
+      {loading ?  <PacmanLoader role="status" color="#0070F3" size={25}/> : <p className={styles.chatbot_emty_p}></p>}
       <form className={styles.form} onSubmit={handleSubmit}>
         <input type="text" placeholder='Ask a question' className={styles.chatbot_input} ref={messageRef} required disabled={disabled}/>
         <button type='submit' className={styles.chatbot_button}>Send</button>

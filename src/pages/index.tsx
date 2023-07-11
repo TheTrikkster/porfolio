@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styles from '@components:./components/styles/Home.module.scss';
 import clsx from 'clsx';
 import Chatbot from '../components/chatbot/Chatbot';
@@ -27,7 +27,7 @@ export default function Home() {
           <div className={styles.home_container_of_image_and_text}>
             <div className={styles.home_left_side_container}>
               <p className={styles.home_left_side_p}>
-                Doukhaev Israil is a passionate and self-taught {techs.map((tech, index) => <><span key={index} style={{color: tech.color}}> {tech.name}</span> {tech.part}</>)}
+                Doukhaev Israil is a passionate and self-taught {techs.map((tech, index) => <span key={index}> <span style={{color: tech.color}}>{tech.name + " "}</span>{tech.part}</span>)}
                 developer, having started programming at the age of 16. He has a varied professional experience, working on various projects.
                 Israil stands out for its excellent understanding of key concepts and its rigorous application of good development practices. 
                 In addition to his technical skills, Israil is proactive and actively participates in team meetings and always up to date with the latest trends in React development.
@@ -43,7 +43,6 @@ export default function Home() {
               />
             </div>
           </div>
-
           <div className={styles.home_competences_container} onMouseOver={() => setShowCompetences(true)}>
               <h4 className={clsx(styles.home_skills_title, showCompetences ? styles.home_competences_show : null)}>Skills</h4>
               <div className={clsx(styles.home_competences, showCompetences ? styles.home_competences_show : null)}>
